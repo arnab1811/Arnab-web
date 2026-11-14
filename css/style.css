@@ -791,3 +791,89 @@ small { font-size: 0.82rem; }
   .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
   .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
 }
+
+/* ============================================================
+   PORTRAITS
+   ============================================================ */
+.hero-photo {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  object-position: center 30%;
+  padding: 0;
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 2px var(--amber), 0 6px 18px rgba(26,58,42,0.18);
+}
+
+.about-portrait { margin: 0 0 1.5rem; }
+.about-portrait img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 40% center;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(26,58,42,0.12);
+}
+.about-portrait figcaption {
+  font-family: var(--ff-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--warm-gray);
+  margin-top: 0.6rem;
+}
+
+.page-hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 3.5rem;
+  align-items: center;
+}
+.page-hero-photo { margin: 0; }
+.page-hero-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid rgba(200,134,58,0.55);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+}
+.page-hero-photo figcaption {
+  font-family: var(--ff-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: rgba(245,240,232,0.6);
+  margin-top: 0.6rem;
+  text-align: center;
+}
+
+.headshot-card {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 1.25rem;
+  align-items: center;
+  background: var(--white);
+  border: 1px solid rgba(200,134,58,0.18);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+.headshot-card img {
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.headshot-card h4 { margin-bottom: 0.3rem; color: var(--forest); }
+.headshot-card p { font-size: 0.88rem; color: var(--ink-light); margin-bottom: 0.75rem; }
+.headshot-card .btn { font-size: 0.8rem; padding: 0.5rem 1rem; }
+
+@media (max-width: 900px) {
+  .page-hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .page-hero-photo { max-width: 160px; }
+  .about-portrait { max-width: 320px; }
+}
+@media (max-width: 480px) {
+  .headshot-card { grid-template-columns: 1fr; }
+}
